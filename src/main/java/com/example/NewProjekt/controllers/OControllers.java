@@ -18,6 +18,6 @@ public class OControllers {
     public String usersAdd(@RequestParam String first_name, @RequestParam String last_name, @RequestParam String role, Model model) {
         Users post = new Users(first_name, last_name, role);
         userRepository.save(post);
-        return "redirect:/";
+        return "edit";
     }
 }
